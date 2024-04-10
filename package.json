@@ -1,0 +1,45 @@
+{
+  "name": "Readit",
+  "version": "1.0.0",
+  "description": "Master Electron Project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "reset": "git reset --hard",
+    "build": "electron-builder --help "
+  },
+  "repository": "https://github.com/lewisc99/electron-add-item-url-project",
+  "homepage": "https://github.com/lewisc99/electron-add-item-url-project",
+  "keywords": [
+    "Electron",
+    "Master Electron",
+    "demo"
+  ],
+  "author": "Lewis",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron-builder": "^24.13.3",
+    "electron": "^9.0.0",
+    "nodemon": "^2.0.0"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.lewis.readit",
+    "copyright": "Copyright Stackacademy.tv",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
+  }
+}
+

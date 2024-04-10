@@ -1,0 +1,18 @@
+node_modules/
+dist/
+
+# OS specific files
+Thumbs.db
+.DS_Store
+
+# IDE or editor configuration files
+.vscode/
+.idea/
+
+# Local environment variables
+.env
+
+# You can add build artifacts or log directories here based on your project setup
+# .build/
+# logs/
+
