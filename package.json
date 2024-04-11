@@ -8,12 +8,9 @@
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
     "build": "electron-builder --help",
-    "release": "electron-builder -w --publish OnTagOrDraft "
+    "release": "electron-builder -w --publish onTagOrDraft"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lewisc99/electron-add-item-url-project"
-  },
+  "repository": "https://github.com/lewisc99/electron-add-item-url-project",
   "homepage": "https://github.com/lewisc99/electron-add-item-url-project",
   "keywords": [
     "Electron",
@@ -21,7 +18,7 @@
     "demo"
   ],
   "author": "Lewis",
-  "license": "MIT",
+  "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^9.0.0",
     "electron-builder": "^24.13.3",
@@ -29,6 +26,7 @@
   },
   "dependencies": {
     "electron-log": "^5.1.2",
+    "electron-updater": "^6.1.8",
     "electron-window-state": "^5.0.3"
   },
   "build": {
@@ -45,15 +43,13 @@
         }
       ],
       "publish": [
-        {
-          "repo": "electron-add-item-url-project",
-          "owner": "lewis99",
-          "provider": "github",
-          "releaseType": "release",
-          "private": false
-        }
+        "github"
       ]
     }
+  },
+  "publish": {
+    "provider": "github",
+    "always": true
   },
   "github": {
     "release": true
