@@ -8,7 +8,7 @@
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
     "build": "electron-builder --help",
-    "release": "electron-builder -w --publish always "
+    "release": "electron-builder -w --publish OnTagOrDraft "
   },
   "repository": {
     "type": "git",
