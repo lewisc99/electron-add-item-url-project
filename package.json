@@ -1,6 +1,6 @@
 {
   "name": "Readit",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Master Electron Project",
   "main": "main.js",
   "scripts": {
