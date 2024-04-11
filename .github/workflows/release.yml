@@ -8,7 +8,7 @@ on:
   release:
     types: [created]
   workflow_dispatch: 
-  
+
 jobs:
   release:
     runs-on: ${{ matrix.os }}
@@ -32,7 +32,7 @@ jobs:
         with:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
-          github_token: ${{ secrets.github_token }}
+          github_token: ${{ GH_TOKEN }}
           use_vue_cli: true
           args: "-p always"
 
