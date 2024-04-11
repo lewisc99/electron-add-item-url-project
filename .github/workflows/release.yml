@@ -1,9 +1,10 @@
 name: Release
 
-on:
+on: 
   push:
-    tags:
-      - master
+    branches: [ main/master ]
+  pull_request:
+    branches: [ main/master ]
 
 jobs:
   release:
