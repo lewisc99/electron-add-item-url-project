@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - master
+    tags:
+      - 'v*' # Trigger on tags like v1.0.0
   pull_request:
     branches:
       - main
