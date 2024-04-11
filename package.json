@@ -1,6 +1,6 @@
 {
   "name": "Readit",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Master Electron Project",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
     "build": "electron-builder --help",
-    "release": "electron-builder -w --publish onTagOrDraft"
+    "release": "electron-builder -w --publish always"
   },
   "repository": "https://github.com/lewisc99/electron-add-item-url-project",
   "homepage": "https://github.com/lewisc99/electron-add-item-url-project",
@@ -48,7 +48,8 @@
     }
   },
   "publish": {
-    "provider": "github"
+    "provider": "github",
+    "always": true
   },
   "github": {
     "release": true
