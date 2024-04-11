@@ -1,6 +1,6 @@
 {
   "name": "Readit",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Master Electron Project",
   "main": "main.js",
   "scripts": {
@@ -8,9 +8,12 @@
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
     "build": "electron-builder --help",
-    "release": "electron-builder -w --publish always"
+    "release": "electron-builder -w --publish always "
   },
-  "repository": "https://github.com/lewisc99/electron-add-item-url-project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lewisc99/electron-add-item-url-project"
+  },
   "homepage": "https://github.com/lewisc99/electron-add-item-url-project",
   "keywords": [
     "Electron",
@@ -18,7 +21,7 @@
     "demo"
   ],
   "author": "Lewis",
-  "license": "CC0-1.0",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^9.0.0",
     "electron-builder": "^24.13.3",
@@ -26,7 +29,6 @@
   },
   "dependencies": {
     "electron-log": "^5.1.2",
-    "electron-updater": "^6.1.8",
     "electron-window-state": "^5.0.3"
   },
   "build": {
@@ -43,13 +45,15 @@
         }
       ],
       "publish": [
-        "github"
+        {
+          "repo": "electron-add-item-url-project",
+          "owner": "lewis99",
+          "provider": "github",
+          "releaseType": "release",
+          "private": false
+        }
       ]
     }
-  },
-  "publish": {
-    "provider": "github",
-    "always": true
   },
   "github": {
     "release": true
