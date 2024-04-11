@@ -3,6 +3,13 @@ const { app, BrowserWindow, ipcMain } = require("electron");
 const windowStateKeeper = require("electron-window-state");
 const readItem = require("./readItem");
 const appMenu = require("./menu");
+const fs = require("fs");
+const updater = require("./updater");
+
+// Read the token from the file
+const tokenFilePath = __dirname + "/private/GH_TOKEN.txt";
+const token = fs.readFileSync(tokenFilePath, "utf8").trim();
+process.env.GH_TOKEN = token;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -17,6 +24,9 @@ ipcMain.on("new-item", (e, itemUrl) => {
 
 // Create a new BrowserWindow when `app` is ready
 function createWindow() {
+  //Check for app updates after 3 seconds
+  setTimeout(updater, 3000);
+
   // Win state keeper
   let state = windowStateKeeper({
     defaultWidth: 500,
@@ -81,3 +91,4 @@ app.on(
     callback(true);
   }
 );
+
